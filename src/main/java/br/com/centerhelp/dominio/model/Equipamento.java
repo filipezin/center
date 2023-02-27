@@ -24,11 +24,33 @@ public class Equipamento {
     @Column(name = "NR_SERIE")
     private String numeroDeSerie;
 
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.DETACH)
+    @JoinColumn(
+            name = "ID_TP_EQUIPAMENTO",
+            referencedColumnName = "ID_TP_EQUIPAMENTO",
+            foreignKey = @ForeignKey(
+                    name = "FK_TP_EQUIPAMENTO",
+                    value = ConstraintMode.CONSTRAINT
+            )
+    )
+    private TipoEquipamento tipo;
 
-    public Equipamento(Long id, String nome, String numeroDeSerie) {
+
+    public Equipamento(Long id, String nome, String numeroDeSerie, TipoEquipamento tipo) {
         this.id = id;
         this.nome = nome;
         this.numeroDeSerie = numeroDeSerie;
+        this.tipo = tipo;
+    }
+
+
+    public TipoEquipamento getTipo() {
+        return tipo;
+    }
+
+    public Equipamento setTipo(TipoEquipamento tipo) {
+        this.tipo = tipo;
+        return this;
     }
 
     public Equipamento() {

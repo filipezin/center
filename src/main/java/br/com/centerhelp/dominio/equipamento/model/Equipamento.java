@@ -1,4 +1,4 @@
-package br.com.centerhelp.dominio.model;
+package br.com.centerhelp.dominio.equipamento.model;
 
 import jakarta.persistence.*;
 

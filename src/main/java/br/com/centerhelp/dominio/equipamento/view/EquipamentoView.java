@@ -1,6 +1,6 @@
-package br.com.centerhelp.dominio.model.view;
+package br.com.centerhelp.dominio.equipamento.view;
 
-import br.com.centerhelp.dominio.model.Equipamento;
+import br.com.centerhelp.dominio.equipamento.model.Equipamento;
 
 import javax.swing.*;
 

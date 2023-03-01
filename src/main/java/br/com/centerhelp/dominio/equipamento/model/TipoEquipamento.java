@@ -1,4 +1,4 @@
-package br.com.centerhelp.dominio.model;
+package br.com.centerhelp.dominio.equipamento.model;
 
 
 import jakarta.persistence.*;
@@ -22,6 +22,24 @@ public class TipoEquipamento {
     public TipoEquipamento(Long id, String nome) {
         this.id = id;
         this.nome = nome;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public TipoEquipamento setId(Long id) {
+        this.id = id;
+        return this;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public TipoEquipamento setNome(String nome) {
+        this.nome = nome;
+        return this;
     }
 
     @Override

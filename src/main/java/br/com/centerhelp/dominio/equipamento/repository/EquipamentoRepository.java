@@ -1,6 +1,6 @@
 package br.com.centerhelp.dominio.equipamento.repository;
 
-import br.com.centerhelp.dominio.Repository;
+import br.com.centerhelp.abstracoes.Repository;
 import br.com.centerhelp.dominio.equipamento.model.Equipamento;
 import br.com.centerhelp.dominio.equipamento.model.TipoEquipamento;
 

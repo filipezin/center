@@ -11,7 +11,7 @@ public class TipoEquipamentoView {
     static TipoEquipamentoRepository repository;
 
     public static TipoEquipamento showForm(TipoEquipamento tp) {
-        String nome = JOptionPane.showInputDialog("Nome", tp == null ? "" : tp.getNome());
+        String nome = JOptionPane.showInputDialog("Tipo de Equipamento", tp == null ? "" : tp.getNome());
         var tipo = new TipoEquipamento();
         tipo.setNome(nome.toUpperCase());
         tipo.setId(tp == null ? null : tp.getId());
@@ -27,8 +27,8 @@ public class TipoEquipamentoView {
 
         TipoEquipamento ret = (TipoEquipamento) JOptionPane.showInputDialog(
                 null, // componente pai. Como não temos será null
-                "Selecione uma categoria",
-                "Menu",
+                "Tipo de Equipamento",
+                "Tipo",
                 JOptionPane.QUESTION_MESSAGE,
                 null, // icone
                 tipos.toArray(), // Número da opção

@@ -1,4 +1,4 @@
-package br.com.centerhelp.dominio;
+package br.com.centerhelp.abstracoes;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
@@ -8,8 +8,7 @@ public abstract class Repository {
 
     public static final EntityManagerFactory factory = Persistence.createEntityManagerFactory("maria-db");
 
-    public static final   EntityManager manager = factory.createEntityManager();
-
+    public static final EntityManager manager = factory.createEntityManager();
 
 
 }

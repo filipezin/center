@@ -4,6 +4,8 @@ import br.com.centerhelp.abstracoes.Repository;
 import br.com.centerhelp.dominio.cliente.model.Cliente;
 import br.com.centerhelp.dominio.cliente.model.TipoCliente;
 
+import java.util.List;
+
 public abstract class ClienteRepository extends Repository {
 
     public static Cliente save(Cliente c){
@@ -23,6 +25,11 @@ public abstract class ClienteRepository extends Repository {
 
     public static Cliente findById(Long id){
         return manager.find(Cliente.class, id);
+    }
+
+    public static List<?> findAll(){
+        String jpql = "from cliente";
+        return manager.createQuery(jpql).getResultList();
     }
 
 }

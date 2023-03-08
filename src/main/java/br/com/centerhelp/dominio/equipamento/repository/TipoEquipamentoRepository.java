@@ -16,6 +16,7 @@ public class TipoEquipamentoRepository extends Repository {
         return manager.find(TipoEquipamento.class, id);
     }
 
+
     public static TipoEquipamento save(TipoEquipamento tp) {
         manager.getTransaction().begin();
         manager.merge(tp);

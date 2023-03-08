@@ -18,5 +18,8 @@ public class Main {
 
         manager.close();
         factory.close();
+
+        System.out.println("Equipamento salvo com sucesso! " +  e );
+
     }
 }

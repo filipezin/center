@@ -24,7 +24,7 @@ public class Equipamento {
     @Column(name = "NR_SERIE")
     private String numeroDeSerie;
 
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.DETACH)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.DETACH})
     @JoinColumn(
             name = "ID_TP_EQUIPAMENTO",
             referencedColumnName = "ID_TP_EQUIPAMENTO",

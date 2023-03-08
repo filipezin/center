@@ -1,5 +1,7 @@
 package br.com.centerhelp;
 
+import br.com.centerhelp.dominio.equipamento.model.Equipamento;
+import br.com.centerhelp.dominio.equipamento.view.EquipamentoView;
 import jakarta.persistence.Persistence;
 
 public class Main {
@@ -8,16 +10,11 @@ public class Main {
         var factory = Persistence.createEntityManagerFactory("maria-db");
         var manager = factory.createEntityManager();
 
-        /*
-        Equipamento e = EquipamentoView.showForm();
-        TipoEquipamento tp = new TipoEquipamento(null, "Notebook");
+        Equipamento e = EquipamentoView.showForm(null);
 
         manager.getTransaction().begin();
-        manager.persist(tp);
-        e.setTipo(tp);
         manager.persist(e);
         manager.getTransaction().commit();
-        */
 
         manager.close();
         factory.close();
